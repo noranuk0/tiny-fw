@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{region.name}}地方の都道府県</title>
+        <link rel="stylesheet" href="/assets/css/reset.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{region.name}}地方の都道府県一覧</h1>
+            <ul>
+                {% for prefecture in prefectures %}
+                    <li>{{prefecture.name}}</li>
+                {% endfor %}
+            </ul>
+            <div><a href="/">戻る</a>
+        </div>
+    </body>
+</html>

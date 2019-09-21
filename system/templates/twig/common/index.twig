@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>都道府県検索</title>
+        <link rel="stylesheet" href="/assets/css/reset.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>都道府県検索</h1>
+            <form method="post" action="/search">
+                <div class="form-group">
+                    <label for="file1">地方を選択</label>
+                    <select class="form-control" name="region">
+                        <option value="">-</option>
+                        {% for region in regions %}
+                            <option value="{{region.region_id}}">{{region.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-primary" type="submit">検索</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
